@@ -35,36 +35,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: road 10s linear infinite;
+    animation: road 10s ease-in-out infinite;
 }
 
 .city img {
     position: relative;
     transform: translate(-100px, -500px);
-    width: 5620px;
+    width: 3500px;
     height: 250px;
 }
 
 @keyframes road {
 
-    0% {
-        transform: translateX(0px);
+    from {
+        transform: translateX(0);
     }
-
-    25% {
-        transform: translateX(-500px);
-    }
-
-    50% {
-        transform: translateX(-1000px);
-    }
-
-    75% {
-        transform: translateX(-1500px);
-    }
-
-    100% {
-        transform: translateX(-2000px);
+    to {
+        transform: translateX(-100vw);
     }
 
 }
@@ -78,7 +65,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    animation: car 10s linear infinite;
+    animation: car 10s ease-in-out infinite;
 }
 
 .car img {
@@ -89,24 +76,11 @@ body {
 
 @keyframes car {
 
-    0% {
-        transform: translateX(100px);
+    from {
+        transform: translateX(0);
     }
-
-    25% {
-        transform: translateX(500px);
-    }
-
-    50% {
-        transform: translateX(1000px);
-    }
-
-    75% {
-        transform: translateX(1500px);
-    }
-
-    100% {
-        transform: translateX(2000px);
+    to {
+        transform: translateX(100vw);
     }
 
 }
@@ -122,17 +96,21 @@ body {
     width: 100px;
     height: 100px;
     transform: translate(450px, -400px);
-    animation: wheel 10s linear infinite;
+    animation: wheel 10s ease-in-out infinite;
 }
 
 @keyframes wheel {
 
-    from {
+    0% {
         transform: translate(450px, -400px) rotate(0deg);
     }
 
-    to {
-        transform: translate(450px, -400px) rotate(360deg);
+    50% {
+        transform: translate(450px, -400px) rotate(-360deg);
+    }
+
+    100% {
+        transform: translate(450px, -400px) rotate(0deg);
     }
 
 
