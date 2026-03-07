@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-circle {
+    height: 30px;
+    width: 30px;
+    border: 1px solid red;
+    border-radius: 50%;
+    animation: waterDrop 2s linear infinite;
+}
+
+@keyframes waterDrop {
+    0% {
+        scale: 0;
+        opacity: 1;
+    }
+    100% {
+        scale: 6.0;
+        opacity: 0;
+    }
+}
